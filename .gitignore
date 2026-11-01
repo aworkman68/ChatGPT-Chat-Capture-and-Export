@@ -11,3 +11,4 @@ Thumbs.db
 *.log
 *.tmp
 node_modules/
+Legacy_versions/
