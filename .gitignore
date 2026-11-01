@@ -1,0 +1,13 @@
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local archives, generated output, and temporary files
+*.zip
+*.pdf
+*.md.bak
+*.log
+*.tmp
+node_modules/

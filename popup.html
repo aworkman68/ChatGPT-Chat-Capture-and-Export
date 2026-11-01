@@ -1,0 +1,13 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>
+body{font:14px system-ui,sans-serif;width:365px;margin:0;padding:16px;color:#222}h2{font-size:17px;margin:0 0 12px}label{display:block;font-weight:600;margin-top:12px}input,select,button{box-sizing:border-box;width:100%;padding:9px;margin-top:5px;border:1px solid #bbb;border-radius:6px}button{background:#245e58;color:white;border:0;cursor:pointer;font-weight:600}button:disabled{opacity:.55;cursor:wait}.muted{color:#555;font-size:12px}.row{display:flex;gap:8px}.row>*{flex:1;min-width:0}#status{white-space:pre-wrap;font-size:12px;margin-top:12px}#matches{display:none}small{display:block;margin-top:4px}.option{display:flex;gap:7px;align-items:center;font-weight:normal;margin:6px 0}.option input{width:auto;margin:0}#searchPanel,#pagePanel{display:none}
+</style></head><body><h2>ChatGPT Chat Capture & Export <span class="muted">v1.0.0</span></h2>
+<label>Capture mode</label>
+<label class="option"><input type="radio" name="mode" value="search"> By search phrase</label>
+<label class="option"><input type="radio" name="mode" value="current" checked> From current scroll location</label>
+<label class="option"><input type="radio" name="mode" value="complete"> Complete conversation</label>
+<div id="searchPanel"><label>Starting text</label><input id="start" placeholder="Find a phrase in the conversation"><button id="find">Find matches</button><div id="matches"><label>Choose starting match</label><select id="match"></select></div></div>
+
+<label>Export format</label><select id="format"><option value="markdown">Markdown</option><option value="print">PDF (direct download)</option></select>
+<label>Filename</label><input id="filename" value="ChatGPT_Conversation">
+<small class="muted">PDF uses Chrome debugger permission during export. Captures through the last discovered message. Verify completeness.</small>
+<button id="export">Capture & Export</button><div id="status" role="status"></div><div id="preview" class="muted" style="white-space:pre-wrap;margin-top:8px"></div><script src="popup.js"></script></body></html>

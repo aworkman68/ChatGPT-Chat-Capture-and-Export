@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Chat Capture & Export",
+  "version": "1.0.0",
+  "description": "Capture ChatGPT conversations to Markdown or a light-themed PDF.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads",
+    "storage",
+    "debugger",
+    "tabs"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "ChatGPT Chat Capture & Export"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
